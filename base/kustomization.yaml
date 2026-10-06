@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - database
+  - client
+
+configMapGenerator:
+  - name: db-config
+    literals:
+      - DB_HOST=database
+      - DB_PORT=5432
+
+secretGenerator:
+  - name: db-secrets
+    literals:
+      - POSTGRESQL_USER=user
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=database
+
+
+
+
