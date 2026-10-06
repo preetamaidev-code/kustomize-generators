@@ -15,7 +15,7 @@ secretGenerator:
   - name: db-secrets
     literals:
       - POSTGRESQL_USER=user
-      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_PASSWORD=newpassword
       - POSTGRESQL_DATABASE=database
 
 
